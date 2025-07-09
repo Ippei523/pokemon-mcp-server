@@ -14,6 +14,5 @@ async function main(): Promise<void> {
   console.error('Pokemon MCP Server running on stdio');
 }
 
-if (require.main === module) {
-  main().catch(console.error);
-}
+// ESMでは直接実行される
+main().catch(console.error);
