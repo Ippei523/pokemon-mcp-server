@@ -9,18 +9,21 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
+    "dev": "ts-node --esm src/index.ts",
     "test": "jest",
     "test:unit": "jest tests/unit",
     "test:e2e": "jest tests/e2e",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:integration": "ts-node tests/integration-test.ts",
+    "test:integration": "ts-node --esm tests/integration-test.ts",
     "watch": "tsc --watch",
     "lint": "echo 'No linter configured yet'",
     "typecheck": "tsc --noEmit"
   },
   "type": "module",
+  "ts-node": {
+    "esm": true
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.4.0",
     "axios": "^1.6.0"
