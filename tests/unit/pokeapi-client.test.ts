@@ -271,7 +271,7 @@ describe('PokeAPIClient Unit Tests', () => {
 
     it('should handle malformed responses', async () => {
       const malformedResponse = 'not json';
-      pokeAPIMocks.mockPokemon('malformed', malformedResponse);
+      pokeAPIMocks.mockPokemon('malformed', malformedResponse, 500);
 
       await expect(client.getPokemon('malformed')).rejects.toThrow();
     });

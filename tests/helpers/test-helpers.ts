@@ -49,10 +49,10 @@ export function setupPokeAPIMocks() {
   const pokeAPIBase = 'https://pokeapi.co/api/v2';
 
   return {
-    mockPokemon: (name: string, response: any) => {
+    mockPokemon: (name: string, response: any, statusCode: number = 200) => {
       return nock(pokeAPIBase)
         .get(`/pokemon/${name}`)
-        .reply(200, response);
+        .reply(statusCode, response);
     },
 
     mockPokemonSpecies: (name: string, response: any) => {

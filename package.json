@@ -20,6 +20,7 @@
     "lint": "echo 'No linter configured yet'",
     "typecheck": "tsc --noEmit"
   },
+  "type": "module",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.4.0",
     "axios": "^1.6.0"
